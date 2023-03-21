@@ -1,0 +1,105 @@
+.parent-home{
+  .parent-child{
+    .nav{
+      .second-nav{
+        color: rgb(72, 72, 72);
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(204,204,205,1) 0%, rgba(251,251,251,1) 100%, rgba(130,130,174,1) 100%);
+        padding: 1rem;
+        .left{
+          width: 38%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          .saved-lists{
+            display: flex;
+            flex-direction: row;
+            border: 1px solid rgb(35, 35, 75);
+            background-color: rgb(35, 35, 75);
+            color: white;
+            padding: 0.7rem;
+            border-radius: 5px;
+            i{
+              margin-right: 0.5rem;
+            }
+          }
+          .saved-filters{
+            display: flex;
+            flex-direction: row;
+            i{
+              margin-right: 0.5rem;
+            }
+          }
+          .search-history{
+            display: flex;
+            flex-direction: row;
+            i{
+              margin-right: 0.5rem;
+            }
+          }
+        }
+        .right{
+          width: 35%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          .search-input{
+            width: 100%;
+            color: gainsboro;
+            .input{
+              width: 98%;
+              padding: 0.5rem 0rem;
+              padding-left: 0.3rem;
+            }
+          }
+        }
+      }
+    }
+    .table-detail{
+      width: 100%;      
+      .table-detail-child{
+        display: flex;
+        flex-direction: row;
+        .table{
+          max-height: 75vh !important;
+          overflow: auto;
+          width: 75%;
+          color: grey;
+          
+          table {            
+            background-color: white !important;
+            color: gray;
+            width: 100%;
+            th,tr,td{
+              color: gray;
+            }
+            .mat-row:hover {
+              background-color: gainsboro;
+            }
+            .mr-02{
+              margin-right: 0.6rem;
+            }
+            .detail-btn-class{
+              background-color: white;
+              border: none;
+              color: blue;
+              cursor: pointer;
+              &:hover{
+                background-color: rgb(180, 179, 179);
+              }
+            }
+          }          
+        }
+        .detail{
+          width: 25%;
+          max-height: 75vh !important;
+          overflow: auto;
+        }
+      }
+    }
+  }
+}

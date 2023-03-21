@@ -1,0 +1,23 @@
+.details-parent{
+  .details-child{
+    margin: 1rem;
+    font-size: smaller;
+    .card{
+      background-color: lightgray;
+      margin-bottom: 1rem;
+      padding: 0.9rem 0.8rem;
+      border-radius: 3px;
+      color: gray;
+      span{
+        color: blue;
+        font-weight: bold;
+      }
+    }
+    .data{
+      p{
+        color: blue;
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
+}

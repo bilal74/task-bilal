@@ -1,0 +1,19 @@
+
+.parent{
+  height: 100vh;
+  .navbar{    
+    height: 6vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(130,130,174,1) 0%, rgba(223,236,238,1) 100%);
+  }
+  .home{
+    height: 88vh;
+    max-height: 88vh;
+    width: 100%;
+  }
+  .footer{
+    height: 6vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(130,130,174,1) 0%, rgba(223,236,238,1) 100%);
+  }
+}

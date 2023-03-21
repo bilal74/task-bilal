@@ -1,0 +1,12 @@
+
+<div class="details-parent">
+  <div class="details-child">
+    <div class="card">
+      No description yet <span>+Add Description</span>
+    </div>
+
+    <div class="data" *ngIf="showData">
+      <p *ngFor="let item of detailDataShow;"> {{item}} </p>  
+    </div>
+  </div>
+</div>

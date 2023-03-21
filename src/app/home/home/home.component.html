@@ -1,0 +1,81 @@
+
+<div class="parent-home">
+  <div class="parent-child">
+    <div class="nav">
+      <div class="second-nav">
+        <div class="left">
+          <div class="saved-lists">
+            <i class="fa fa-bars"></i>
+            <p>SAVED LISTS</p>
+          </div>
+          <div class="saved-filters">
+            <i class="fa fa-filter"></i>
+            <p>SAVED FILTERS</p>
+          </div>
+          <div class="search-history">          
+            <i class="fa fa-history"></i>
+            <p>SEARCH HISTORY</p>
+          </div>
+        </div>
+        <div class="right">
+          <div class="search-input">
+            <input type="text" placeholder="Search" class="input" (keyup)="onKeyInput($event)">
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="table-detail">
+      <div class="table-detail-child">
+        <div class="table">
+          
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+          
+            <!-- Date Column -->
+            <ng-container matColumnDef="date">
+              <th mat-header-cell *matHeaderCellDef> Date </th>
+              <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+            </ng-container>
+          
+            <!-- List Name Column -->
+            <ng-container matColumnDef="listName">
+              <th mat-header-cell *matHeaderCellDef> List Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.listName}} </td>
+            </ng-container>
+          
+            <!-- Entities Column -->
+            <ng-container matColumnDef="entities">
+              <th mat-header-cell *matHeaderCellDef> No. of Entities </th>
+              <td mat-cell *matCellDef="let element"> {{element.entities}} </td>
+            </ng-container>
+          
+            <!-- Actions Column -->
+            <ng-container matColumnDef="actions">
+              <th mat-header-cell *matHeaderCellDef> Actions </th>
+              <td mat-cell *matCellDef="let element"> 
+                <i class="fa fa-envelope mr-02"></i> 
+                <i class="fa fa-share-alt mr-02"></i> 
+                <i class="fa fa-pencil mr-02"></i> 
+                <i class="fa fa-trash mr-02"></i> 
+              </td>
+            </ng-container>
+
+            <!-- Details Column -->
+            <ng-container matColumnDef="details">
+              <th mat-header-cell *matHeaderCellDef> Details </th>
+              <td mat-cell *matCellDef="let element"> <button (click)="detailBtn(element)" class="detail-btn-class">Details</button> </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </div>
+        <div class="detail">
+         <app-details [detailData]="detailData"></app-details>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
